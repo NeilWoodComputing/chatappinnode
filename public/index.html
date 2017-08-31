@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Speed Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="client.js"></script>
+
+  <body>
+  <section class="login active">
+      <div>
+       <img src="icon.png" alt="icon" class="icon"   >
+        <form onsubmit="return Login();">
+    		  <input id="username" autocomplete="off" placeholder="Username" required /><button type="submit">Let's Chat</button>
+        </form>
+      </div>
+  </section>
+
+  <section class="messagebody">
+    <ul id="messages"></ul>
+    <form id="chatbox" action="">
+    <div class="row">
+        <div class="col-8">
+          <input id="m" autocomplete="off" required />
+        </div>
+          <div class="col-4">
+            <button>Send</button>
+          </div>
+      </div>
+    </form>
+    </section>
+  </body>
+</html>
