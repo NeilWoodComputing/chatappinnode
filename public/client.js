@@ -14,7 +14,7 @@
 
    //  });
 
-   var username ="dave";
+   var username ="";
 
   $(function () {
     var socket = io();
@@ -30,14 +30,20 @@
       $('#messages').append($('<li>').html(username1 + ": " + msg + " <span>" + time + "</span>"));
     });
 
-    socket.on('connected message', function(data, socket){
+    socket.on('connected message', function(count){ 
        $('#messages').append($('<li>').text("New user connected"));
+       $(".connectedusers").html("Users online: " + count );
       console.log(socket)
     });
 
-    socket.on('disconnected message', function(data){
-       $('#messages').append($('<li>').text( "disconnected"));
-       // console.log(data)
+    socket.on('job', function(data){
+     console.log(data)
+    });
+
+    socket.on('disconnected message', function(count, id){
+       $('#messages').append($('<li>').text( "user disconnected"));
+       $(".connectedusers").html("Users online: " + count );
+        console.log(id)
     });
 
       // function Login2(){

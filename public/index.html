@@ -4,7 +4,7 @@
     <title>Speed Chat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
   </head>
 
 
@@ -18,7 +18,7 @@
   <body>
   <section class="login active">
       <div>
-       <img src="icon.png" alt="icon" class="icon"   >
+       <img src="ion-icon.png" alt="icon" class="icon"   >
         <form onsubmit="return Login();">
     		  <input id="username" autocomplete="off" placeholder="Username" required /><button type="submit">Let's Chat</button>
         </form>
@@ -26,13 +26,14 @@
   </section>
 
   <section class="messagebody">
+    <div class="connectedusers"></div>
     <ul id="messages"></ul>
     <form id="chatbox" action="">
-    <div class="row">
-        <div class="col-8">
+    <div class="row row-no-margin">
+        <div class="col-8 col-sm-9 col-md-10 col-lg-11">
           <input id="m" autocomplete="off" required />
         </div>
-          <div class="col-4">
+          <div class="col-4 col-sm-3 col-md-2 col-lg-1">
             <button>Send</button>
           </div>
       </div>
