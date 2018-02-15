@@ -1,12 +1,21 @@
 <title>Read it Quicka</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
 	<style>
+
+		@font-face {
+		    font-family: LexieReadable-Regular;
+		    src: url(LexieReadable-Regular.ttf);
+		}
 		.hidden {display:none;}
-		body {font-family:'Orbitron', sans-serif; font-size:16px;}
+		body {font-size:16px; font-family:'Orbitron', sans-serif; }
 		.navbar-brand h4{font-size:2.1rem;}
-		h3{
+		.wordcontainer h3{
 			font-size: 1.9rem;
 			text-align: center;
 			padding-top: 100px;
@@ -14,20 +23,115 @@
 			
 			}
 
-			.wordcontainer {
-				min-height: 55vh;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-			}
+		.wordcontainer {
+			font-family:'LexieReadable-Regular', sans-serif;
+			min-height: 48vh;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: #FFFACD;
+			color:#000080;
+		}
 
-			#wordspm{ display:block; text-align: center;}
-			.btncontainer{ text-align: center;}
-			.hidden { display : none;}
+		#wordspm{ display:block; text-align: center;}
+		.btncontainer{ text-align: center;}
+		.hidden { display : none;}
 
-			#WPMSlider1 .slider-selection {
-				background: #BABABA;
-			}
+		#WPMSlider1 .slider-selection {
+			background: #BABABA;
+		}
+
+		.ui-slider-handle{
+			height: 20px;
+			width: 20px;
+			display: block;
+			position: absolute;
+			z-index: 99;
+			top: -5px;
+			background-color: #38c;
+			border-radius:20px;
+		}
+
+		.chev{
+			position: absolute;
+			top: 35vh;
+			font-size: 30px;
+		}
+
+		.chev.next { right:0; }
+		.chev.prev{left:0;}
+
+		    #mg_lb_contents, #mg_lb_loader {
+        color: #333;
+        background-color: #fff;
+    }
+
+    #mg_lb_loader .mg_loader{
+        transform: scale(0.9) translateZ(0);
+        -webkit-transform: scale(0.9) translateZ(0);
+		width: 50px;
+		margin: 57px auto;
+		padding: 22px 0;
+    }
+
+    .mg_lb_wrap .mg_loader div
+    {
+        background-color: #333333;
+    }
+
+    .mgl_1, .mgl_2, .mgl_3, .mgl_4{
+		background-color: #777;
+		width: 11px;
+		height: 11px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 1px;
+		-webkit-animation: mg_loader 2s infinite ease-in-out;
+		animation: mg_loader 2s infinite ease-in-out;
+    }
+
+@keyframes mg_loader{
+   25% {
+    transform: translate3d(15px,0,0) rotate(-90deg) scale(0.3);
+    }
+    50% {
+        transform: translate3d(15px,15px,0) rotate(-179deg);
+    }
+    75% {
+        transform: translate3d(0,15px,0) rotate(-270deg) scale(0.3);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+    .mgl_2 {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+    .mgl_3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+    .mgl_4 {
+    -webkit-animation-delay: -1.5s;
+    animation-delay: -1.5s;
+}
+
+
+	#BookSelect li a { 
+		width:100%;
+		display:block; 
+	}
+
+		@media(min-width:400px)
+		{
+			.wordcontainer h3{font-size: 4rem;}
+		}
+	</style>
 	</style>
