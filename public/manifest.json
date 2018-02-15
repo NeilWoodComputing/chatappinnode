@@ -1,7 +1,7 @@
 {
   "name":"Quickr - Read things faster",
   "short_name": "Quickr",
-  "start_url": "/",
+  "start_url": "https://murmuring-plateau-37268.herokuapp.com/",
   "scope":".",
   "display":"standalone",
   "background_color": "#f6f6f6",
