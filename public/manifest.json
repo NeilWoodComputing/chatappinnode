@@ -9,5 +9,13 @@
   "description":"Read text quicker with Quika",
   "dir":"ltr",
   "lang": "en-US",
-  "orientation":"portrait-primary"
+  "orientation":"portrait-primary",
+  "icons": [
+    {
+    "src":"favicons/android-icon-144x144.png",
+    "type":"image/png",
+    "sizes":"144x144"
+    }
+  ]
+}
 }
