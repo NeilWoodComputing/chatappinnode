@@ -41,7 +41,7 @@
       
       <div class="card-body" id="BookSelect">
         <ul class="list-group">
-          <li class="list-group-item"><a onclick="return SetBook(1)">Alice in wonderlnd</a></li>
+          <li class="list-group-item"><a onclick="return SetBook(1)">Alice in wonderland</a></li>
           <li class="list-group-item"><a onclick="return SetBook(2)">Q</a></li>
           <li class="list-group-item"><a onclick="return SetBook(3)">Fear And Loathing</a></li>
           <li class="list-group-item"><a onclick="return CustomBook()">Add Custom Text</a></li>
@@ -143,6 +143,12 @@
     var wordnumb = 0;
     var arrnumb = 0;
     var timeoutfunct;
+
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+         .register('/sw.js')
+         .then(function() { console.log("Service Worker Registered"); });
+    }
 
     function SetSettings(){
 
