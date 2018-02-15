@@ -1,0 +1,13 @@
+{
+  "name":"Quicka - Read things faster",
+  "short_name": "Quicka",
+  "start_url": "/index.html",
+  "scope":".",
+  "display":"standalone",
+  "background_color": "#f6f6f6",
+  "theme_color":"blue",
+  "description":"Read text quicker with Quika",
+  "dir":"ltr",
+  "lang": "en-US",
+  "orientation":"portrait-primary"
+}
