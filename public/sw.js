@@ -9,7 +9,17 @@ self.addEventListener('install', function(event) {
     caches.open("servicecache").then(function(cache) {
       return cache.addAll(
         [
-          '/index.ejs'
+			'views/pages/index.ejs',
+			'views/pages/db.ejs',
+			'views/partials/header.ejs',
+			'views/partials/nav.ejs',
+
+			'public/manifest.json',
+			'public/fonts/LexieReadale-Regular.ejs'
+
+
+
+
         ]
       );
     })
